@@ -1,0 +1,17 @@
+{
+  "name": "ar-inscription-batcher",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [],
+  "author": "Ben Law",
+  "license": "MIT",
+  "dependencies": {
+    "arweave": "^1.14.4",
+    "node-fetch": "^3.3.2"
+  }
+}
