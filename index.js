@@ -63,7 +63,7 @@ const initWallet = async () => {
       msgDivider
   );
 
-  if (balance == "0") {
+  if (balance == "0.000000000000") {
     console.log("No balance in your address, plase top up.");
     process.exit(1);
   }
