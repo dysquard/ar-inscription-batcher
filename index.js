@@ -107,6 +107,8 @@ async function executeOP(pk, transaction, startTime) {
 
     if (config.FAST) {
       arweave.transactions.post(transaction);
+      worker.postMessage(transaction.id);
+      console.log(`${transaction.id} sent.`);
     } else {
       const response = await arweave.transactions.post(transaction);
       if (response.status < 200 || response.status >= 300) {

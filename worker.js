@@ -13,8 +13,7 @@ const arweave = Arweave.init({
   logging: false, // Enable network request logging
 });
 
-const INTERVAL_NEW_TX_FOUND = 100;
-const INTERVAL_POOLING = 100000;
+
 
 let txQueue = [];
 let index = 0;
@@ -41,8 +40,8 @@ const query = async () => {
         }
       });
     newTxConfirmation
-      ? await wait(INTERVAL_NEW_TX_FOUND)
-      : await wait(INTERVAL_POOLING);
+      ? await wait(config.INTERVAL_NEW_TX_FOUND)
+      : await wait(config.INTERVAL_POOLING);
   }
 };
 await query();
