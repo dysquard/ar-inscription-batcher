@@ -41,7 +41,7 @@ const query = async () => {
       });
     newTxConfirmation
       ? await wait(config.INTERVAL_NEW_TX_FOUND)
-      : await wait(config.INTERVAL_POOLING);
+      : await wait(config.INTERVAL_POLLING);
   }
 };
 await query();

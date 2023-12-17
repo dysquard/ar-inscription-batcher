@@ -12,7 +12,7 @@ const DATA = OP_MINT; // This will be set to any OP_XXXX depending on the operat
 const NODE_SUBMIT = 1; // if you have connection problem, set to a different node number listed in './nodes.js'.
 const NODE_QUERY = 1; // if you have connection problem, set to a different node number listed in './nodes.js'.
 const INTERVAL_NEW_TX_FOUND = 100;
-const INTERVAL_POOLING = 100000; // ms - pooling tx confirmation ineterval.
+const INTERVAL_POLLING = 100000; // ms - pooling tx confirmation ineterval.
 const INTERVAL_SUBMITTING = 800; // ms - This is not accurate since it's affected by async methods.
 const FAST = false; // if set to true, get max speed by ignoring http request response, but if too fast you may get rejected by server.
 
@@ -21,13 +21,13 @@ const PK_PATH = "./pk.json";
 
 const config = {
   INTERVAL_NEW_TX_FOUND,
-  INTERVAL_POOLING,
+  INTERVAL_POLLING,
   NODE_SUBMIT:ipOnly(nodes[NODE_SUBMIT]),
   NODE_QUERY:ipOnly(nodes[NODE_QUERY]),
   OP_COST,
-  FAST: FAST,
+  FAST,
   DATA,
-  INTERVAL_SUBMITTING: INTERVAL_SUBMITTING,
+  INTERVAL_SUBMITTING,
   BLACK_HOLE_ADDR: "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
   PK_PATH,
 };
